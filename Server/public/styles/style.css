@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/Images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.blue-grad {
+    background: #010833;
+    background: -webkit-linear-gradient(bottom right, #010833, #2024A0);
+    background: -moz-linear-gradient(bottom right, #010833, #2024A0);
+    background: linear-gradient(to top left, #010833, #2024A0);
+}
+
+.green-grad {
+    background: #037277;
+    background: -webkit-linear-gradient(bottom right, #037277, #01DCE5);
+    background: -moz-linear-gradient(bottom right, #037277, #01DCE5);
+    background: linear-gradient(to top left, #037277, #01DCE5);
+}
+
+.blue-grad:hover {
+    background: #037277;
+    background: -webkit-linear-gradient(bottom right, #037277, #01DCE5);
+    background: -moz-linear-gradient(bottom right, #037277, #01DCE5);
+    background: linear-gradient(to top left, #037277, #01DCE5);
+}
+
+.blue-grad:active{
+    background: #010833;
+    background: -webkit-linear-gradient(bottom right, #010833, #2024A0);
+    background: -moz-linear-gradient(bottom right, #010833, #2024A0);
+    background: linear-gradient(to top left, #010833, #2024A0);
+}
