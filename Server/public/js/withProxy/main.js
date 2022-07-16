@@ -1,8 +1,7 @@
 
 $(document).ready(function () {
-    console.log('ready');
     $("#searchButton").click(function (e) {
-        console.log('click');
+        e.preventDefault();
         const cityName = $("#cityNameInput").val();
         const URL = `http://localhost:4000/openWeatherMapAPiProxy`;
         fetch(URL, {
@@ -14,7 +13,6 @@ $(document).ready(function () {
             body: JSON.stringify({ cityName }),
         })
             .then((response) => {
-                console.log(response);
                 if (response.status === 429) {
                     return { message: "Too Many Requests!" }
                 } else {

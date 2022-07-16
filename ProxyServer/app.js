@@ -1,9 +1,11 @@
 const express = require("express");
 const fetch = require("node-fetch");
 const cors = require("cors");
-require("dotenv").config();
+// require("dotenv").config();
 const { limitter } = require('./auth/index');
 const configure = require('./config/config');
+const { ensureExists } = require('./tools/files');
+const path = require('path');
 
 const PORT = process.env.PORT || 4000;
 
@@ -37,6 +39,10 @@ app.post('/openWeatherMapAPiProxy', limitter(), (req, res) => {
     };
 });
 
-app.listen(PORT, () => {
-    console.log(`Proxy Server is running on port ${PORT}`);
+
+ensureExists(path.join(__dirname, 'tickets'), function () {
+    app.listen(PORT, () => {
+        console.log(`Proxy Server is running on port ${PORT}`);
+    });
 });
+
